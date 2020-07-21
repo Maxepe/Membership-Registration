@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Parcial2_PROGIII_110925.Models.Socio>
+
+@{
+    ViewBag.Title = "ListadoSocios";
+}
+
+<h2>ListadoSocios</h2>
+
+<div class="row">
+    <div class="col-lg-6">
+        <table class="table table-bordered table-striped">
+            <thead> <!--encabezado-->
+                <tr>
+                    <th class="text-center">
+                        Nombre
+                    </th>
+                    <th class="text-center">
+                        Apellido
+                    </th>
+                    <th class="text-center">
+                        Número de documento
+                    </th>
+                    <th class="text-center">
+                        Deporte
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var socio in Model)
+                {
+                <tr class="text-center">
+                    <td>
+                        @socio.pNombre
+                    </td>
+                    <td>
+                        @socio.pApellido
+                    </td>
+                    <td>
+                        @socio.pNroDocumento
+                    </td>
+                    <td>
+                        @socio.pIdDeporte
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

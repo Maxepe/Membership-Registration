@@ -1,0 +1,42 @@
+﻿@model Parcial2_PROGIII_110925.ViewModels.Reportes.ReporteItemVM
+
+@{
+    ViewBag.Title = "Reporte";
+}
+
+<h2>Reporte</h2>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="col-sm-12">
+            <div>
+                <h4>Cantidad de personas por deporte</h4>
+            </div>
+        </div>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">
+                        Deporte
+                    </th>
+                    <th class="text-center">
+                        Cantidad
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var deporte in Model.listaDeportes)
+                {
+                    <tr class="text-center">
+                        <td>
+                            @deporte.pNombre
+                        </td>
+                        <td>
+                            @deporte.pCantidad
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
